@@ -1,0 +1,36 @@
+using System;
+class HelloWorld {
+  static void Main() {
+    string nome, email, nome1; 
+    int senha, senha1;
+    //entrada de dados
+    Console.Write("Cadastre - se na plataforma\n");
+    Console.Write("\nCrie um login: ");
+    nome = Console.ReadLine();
+    Console.Write("\nCrie seu e-mail: ");
+    email = Console.ReadLine();
+    Console.Write("\nCrie sua senha: ");
+    senha = int.Parse(Console.ReadLine());
+    Console.Clear();
+    Console.WriteLine("\nDigite o seu Login: ");
+    nome1 = Console.ReadLine();
+    Console.WriteLine("\nDigite sua senha: ");
+    senha1 = int.Parse(Console.ReadLine());
+    //saida de dados
+    if(nome == nome1){
+        if(senha == senha1){
+            Console.WriteLine("Acesso liberado");
+        }
+    }else{
+        while(nome != nome1 || senha != senha1){
+    Console.WriteLine("Acesso negado!!\nTente novamente");
+    Console.ReadKey();
+    Console.Clear();
+    Console.WriteLine("\nDigite o seu Login: ");
+    nome1 = Console.ReadLine();
+    Console.WriteLine("\nDigite sua senha: ");
+    senha1 = int.Parse(Console.ReadLine());
+        }
+    }
+  }
+}
